@@ -4,6 +4,7 @@ version = "0.1.0"
 edition = "2021"
 authors = ["Faun Krambrich <faun@fauns.space>"]
 license = "MIT" 
+license-file = "LICENSE.md"
 description = "A simple timestamp library for miniquad/macroquad"
  
 [target.'cfg(not(target_arch = "wasm32"))'.dependencies]
