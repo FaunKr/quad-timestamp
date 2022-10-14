@@ -1,6 +1,6 @@
 [package]
 name = "quad-timestamp"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["Faun Krambrich <faun@fauns.space>"]
 license = "MIT"  
@@ -9,6 +9,7 @@ description = "A simple timestamp library for miniquad/macroquad"
 repository = "https://github.com/FaunKr/quad-timestamp"
 keywords = ["timestamp", "gamedev", "miniquad", "macroquad"]
 categories = ["game-engine::miniquad", "game-engine::macroquad"]
+documentation = "https://docs.rs/quad-timestamp/"
  
 [target.'cfg(not(target_arch = "wasm32"))'.dependencies]
 chrono = "0.4"

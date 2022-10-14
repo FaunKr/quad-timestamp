@@ -14,7 +14,20 @@ mod internal{
     }
 }
 
-
+/// Returns an `Option<i64>` with the current UTC timestamp in seconds.
+/// 
+/// # Example
+/// 
+/// ```
+/// use quad_timestamp::timestamp_utc;
+/// 
+/// let timestamp = timestamp_utc();
+/// ```
+/// 
+/// # Returns
+/// 
+/// `Option<i64>` - The current UTC timestamp in seconds. None if the timestamp could not be retrieved.
+///  
 pub fn timestamp_utc() -> Option<i64>{ 
     
     #[cfg(target_arch = "wasm32")]
@@ -31,6 +44,21 @@ pub fn timestamp_utc() -> Option<i64>{
         return Some(chrono::Utc::now().timestamp());
     }
 }
+
+/// Returns an `Option<i64>` with the current UTC timestamp in milliseconds.
+/// 
+/// # Example
+/// 
+/// ```
+/// use quad_timestamp::timestamp_utc_ms;
+/// 
+/// let timestamp = timestamp_utc_ms();
+/// ```
+/// 
+/// # Returns
+/// 
+/// `Option<i64>` - The current UTC timestamp in milliseconds. None if the timestamp could not be retrieved.
+/// 
 pub fn timestamp_utc_ms() -> Option<i64>{ 
     #[cfg(target_arch = "wasm32")]
     {
