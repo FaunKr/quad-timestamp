@@ -2,8 +2,9 @@
 name = "quad-timestamp"
 version = "0.1.0"
 edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+authors = ["Faun Krambrich <faun@fauns.space>"]
+license = "MIT" 
+description = "A simple timestamp library for miniquad/macroquad"
  
 [target.'cfg(not(target_arch = "wasm32"))'.dependencies]
 chrono = "0.4"
