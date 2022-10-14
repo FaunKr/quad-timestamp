@@ -8,8 +8,13 @@ params_set_mem = function (wasm_memory, _wasm_exports) {
  
 
 params_register_js_plugin = function (importObject) {
-    importObject.env.quad_timestamp = function () {
+
+    importObject.env.timestamp_utc = function () { 
         return Math.round(new Date().getTime()/1000);
+    } 
+
+    importObject.env.timestamp_utc_ms = function () {
+        return Math.round(new Date().getTime());
     } 
 }
 
